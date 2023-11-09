@@ -1,0 +1,163 @@
+@import-normalize;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.h1 {
+    font-size: x-large;
+    margin-right: 20px;
+    font-weight: bold;
+    position: relative;
+    
+}
+
+.header-t {
+    display: block;
+    max-width: 600px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url(../public/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: -40px center;
+    background-color: orangered;
+    border-radius: 10px;
+    position: relative;
+}
+.t{
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.rate{
+    width: 170px;
+    height: 80px;
+    margin: -180px 55%;
+    position: absolute;
+    
+}
+
+
+
+main{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.item{
+    display: block;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    background: whitesmoke;
+    overflow: visible;
+    margin-top: 10px;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.item img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 500ms ease;
+}
+.item img:hover{
+    transform: scale(1.05);
+}
+
+main span, main p, main h1{
+    margin: 20px 20px;
+    line-height: 0.7;
+    
+}
+ 
+main p{
+    color: #028A00;
+    font-weight:bold;
+    text-align: left;
+    padding: 10px 0;
+}
+
+main h1{
+    text-align: left;
+    font-weight: bold;
+    font-size: larger;
+}
+
+main span{
+    font-size:small;
+    color: grey;
+}
+
+@font-face {
+    font-family: 'Luminari';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Luminari'), url('../public/Luminari-Regular.woff') format('woff');
+    }
+
+    h3{
+        font-family: 'Luminari';
+        font-size: xx-large;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .plusB{
+        position: absolute;
+        right: 30px;
+        top: 80%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        text-align: right;
+    }
+
+    .block-crumbs {
+        margin-top: 80px;
+        background-color: orangered;
+    }
+    
+    
+    .p, .c, .m{
+        
+        color: white;
+        
+    }
+
+  html::-webkit-scrollbar {
+        width: 7px;
+       }
+       
+       html::-webkit-scrollbar-track {
+        
+        background-color: #f9f9fd;
+        border-radius: 10px;
+       }
+       
+       html::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: linear-gradient(180deg,  orangered, #fbb000);
+       }
+
+       
+
+       .each-slide-effect > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        height: 350px;
+        margin-top: 30px;
+        width: 100%;
+      }
+      
+      .each-slide-effect span {
+        padding: 20px;
+        font-size: 20px;
+        background: #efefef;
+        text-align: center;
+      }
+    
