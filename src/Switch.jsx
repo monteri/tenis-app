@@ -7,21 +7,15 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
+import Book from './Book';
 
 
 function ModalSwitch() {
     return (
-
         <Router>
             <Switch>
-                <Route exact path="/gallery">
-                    g
-                </Route>
-                <Route exact path="/contact">
-                    c
-                </Route>
-                <Route exact path="/map">
-                    m
+                <Route exact path="/book/:id">
+                    <Book />
                 </Route>
                 <Route exact path="/">
                     <div className="main">

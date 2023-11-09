@@ -3,7 +3,6 @@ import { HiOutlinePhotograph } from "@react-icons/all-files/hi/HiOutlinePhotogra
 import { IoIosContact } from "@react-icons/all-files/io/IoIosContact";
 import { Breadcrumbs } from "@material-tailwind/react";
 import { BiMap } from "@react-icons/all-files/bi/BiMap";
-import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import logo from "../src/small.png"
 import Carousel from "./Carousel";
 import SocialMedia from "./SocialMedia";
@@ -19,22 +18,19 @@ function PopoverPlacement() {
   const [open, setOpen ] = React.useState(false);
   const [open1, setOpen1 ] = React.useState(false);
   const [open2, setOpen2 ] = React.useState(false);
- 
+
   const handleOpen = () => setOpen(!open);
   const handleOpen1 = () => setOpen1(!open1);
   const handleOpen2 = () => setOpen2(!open2);
-  
-  
-  const history = useHistory()
 
   return (
     <>
-    <Breadcrumbs className="block-crumbs">
-            <HiOutlinePhotograph onClick={handleOpen} className="hover:text-blue-600 p w-8 h-8" />
-            <IoIosContact onClick={handleOpen1} className="hover:text-purple-600 c w-8 h-8"/>
-            <BiMap onClick={handleOpen2} className="hover:text-green-600 m w-8 h-8"/>
-    </Breadcrumbs>
-    <Dialog className="w-auto h-auto dialog" open={open} handler={handleOpen}>
+      <Breadcrumbs className="block-crumbs">
+        <HiOutlinePhotograph onClick={handleOpen} className="hover:text-blue-600 p w-8 h-8" />
+        <IoIosContact onClick={handleOpen1} className="hover:text-purple-600 c w-8 h-8"/>
+        <BiMap onClick={handleOpen2} className="hover:text-green-600 m w-8 h-8"/>
+      </Breadcrumbs>
+      <Dialog className="w-auto h-auto dialog" open={open} handler={handleOpen}>
         <DialogHeader  className="gallery">Галерея <img className=" rounded-md w-24 h-20 absolute top-1 right-1 object-cover object-center" src={logo} alt="logo" /></DialogHeader>
         <DialogBody className="gallery-text">
         <Carousel/>
@@ -48,7 +44,22 @@ function PopoverPlacement() {
       </Dialog>
       <Dialog open={open1} handler={handleOpen1}>
         <DialogHeader>Контакти <img className=" rounded-md w-24 h-20 absolute top-1 right-1 object-cover object-center" src={logo} alt="logo" /></DialogHeader>
-        <DialogBody>
+        <DialogBody className="dialog-body-scroll">
+          It looks like you're trying to sanitize user input to prevent script injection attacks in your React application. The function you've provided uses jQuery to escape script tags from user inputs. However, in a React application, you should rely on React's built-in mechanisms for handling user input safely, rather than manipulating the DOM directly with jQuery.
+
+          React automatically escapes all strings rendered in JSX before rendering them. Unless you're using dangerouslySetInnerHTML, you typically won't need to manually escape input as React does this for you.
+
+          However, if you're handling raw HTML or injecting HTML into the DOM, which is not recommended, you'll need to ensure that the content is sanitized. For those cases, you could use a library like DOMPurify to sanitize the content before it's used.
+
+          Here's how you can sanitize user input in React without jQuery:
+
+          It looks like you're trying to sanitize user input to prevent script injection attacks in your React application. The function you've provided uses jQuery to escape script tags from user inputs. However, in a React application, you should rely on React's built-in mechanisms for handling user input safely, rather than manipulating the DOM directly with jQuery.
+
+          React automatically escapes all strings rendered in JSX before rendering them. Unless you're using dangerouslySetInnerHTML, you typically won't need to manually escape input as React does this for you.
+
+          However, if you're handling raw HTML or injecting HTML into the DOM, which is not recommended, you'll need to ensure that the content is sanitized. For those cases, you could use a library like DOMPurify to sanitize the content before it's used.
+
+          Here's how you can sanitize user input in React without jQuery:
           <SocialMedia />
         </DialogBody>
         <DialogFooter>

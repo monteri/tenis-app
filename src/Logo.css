@@ -9,7 +9,7 @@
     margin-right: 20px;
     font-weight: bold;
     position: relative;
-    
+
 }
 
 .header-t {
@@ -34,7 +34,7 @@
     height: 80px;
     margin: -180px 55%;
     position: absolute;
-    
+
 }
 
 
@@ -69,9 +69,9 @@ main{
 main span, main p, main h1{
     margin: 20px 20px;
     line-height: 0.7;
-    
+
 }
- 
+
 main p{
     color: #028A00;
     font-weight:bold;
@@ -119,30 +119,30 @@ main span{
         margin-top: 80px;
         background-color: orangered;
     }
-    
-    
+
+
     .p, .c, .m{
-        
+
         color: white;
-        
+
     }
 
   html::-webkit-scrollbar {
         width: 7px;
        }
-       
+
        html::-webkit-scrollbar-track {
-        
+
         background-color: #f9f9fd;
         border-radius: 10px;
        }
-       
+
        html::-webkit-scrollbar-thumb {
         border-radius: 10px;
         background: linear-gradient(180deg,  orangered, #fbb000);
        }
 
-       
+
 
        .each-slide-effect > div {
         display: flex;
@@ -153,11 +153,15 @@ main span{
         margin-top: 30px;
         width: 100%;
       }
-      
+
       .each-slide-effect span {
         padding: 20px;
         font-size: 20px;
         background: #efefef;
         text-align: center;
       }
-    
+
+.dialog-body-scroll {
+    max-height: 500px;
+    overflow-y: scroll;
+}
